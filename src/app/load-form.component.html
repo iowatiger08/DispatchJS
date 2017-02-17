@@ -3,40 +3,41 @@
     <form>
       <div class="form-group">
         <label for="name">Load Id</label>
-        <input type="text" class="form-control" id="id" />
+        <input type="text" class="form-control" id="id" [(ngModel)]="model.id" name="id"/>
       </div>
       <div class="form-group">
         <label for="name">Manifest</label>
-        <input type="text" class="form-control" id="manifest" />
+        <input type="text" class="form-control" id="manifest" [(ngModel)]="model.manifest" name="manifest"/>
       </div>
       <div class="form-group">
-        <label for="departLocation">Depart Point</label>
-        <input type="text" class="form-control" id="departLocation"/>
+        <label for="departPoint">Depart Point</label>
+        <input type="text" class="form-control" id="departPoint" [(ngModel)]="model.departPoint" name="departPoint" />
       </div>
       <div class="form-group">
-        <label for="deliveryLocation">Delivery Point</label>
-        <input type="text" class="form-control" id="deliveryLocation"/>
+        <label for="deliveryPoint">Delivery Point</label>
+        <input type="text" class="form-control" id="deliveryPoint" [(ngModel)]="model.deliveryPoint" name ="deliveryPoint"/>
       </div>   
       <div class="form-group">
         <label for="carrier">Carrier</label>
-        <input type="text" class="form-control" id="deliveryLocation" />
+        <input type="text" class="form-control" id="carrier" [(ngModel)]="model.carrier" name ="carrier" />
       </div>    
       <div class="form-group">
         <label for="driver">Driver Id</label>
-        <input type="text" class="form-control" id="driver" />
+        <input type="text" class="form-control" id="driver" [(ngModel)]="model.driver" name="driver"/>
       </div>   
       <div class="form-group">
         <label for="fillStart">Fill Start</label>
-        <input type="text" class="form-control" id="fillStart"/>
+        <input type="text" class="form-control" id="fillStart" [(ngModel)]="model.fillStart" name="fillStart"/>
       </div>
       <div class='form-group'>
         <label for='loadStatus'>Load Status</label>
-        <select class="form-control" id='loadStatus' >
+        <select class="form-control" id='loadStatus' [(ngModel)]="model.loadStatus" name ="loadStatus">
           <option *ngFor="let stat of loadStatus" [value]="stat">{{stat}}</option>
         </select>
       </div>
         <div class="form-group">
           <label for='fileUpload'>Message File Upload</label>
+          <input type="file" id="msgUpload" name="msgUpload">
           <button (click)="onClickMe()">Send file</button>
         </div>
 
