@@ -8,13 +8,13 @@ import {Load } from './load';
 })
 
 export class LoadFormComponent {
-
+/*
   routesAvailable = ['RuanCenterToDairyQueen', 'RuanCenterToAEDairy'];
+*/
+  loadStatus = ['Loading','InQueue', 'InTransit', 'BreakDown', 'Complete' , 'Reassigned' ]
 
-  loadStatus = ['loading','InQueue', 'InTransit', 'BreakDown', 'Complete' , 'Reassigned' ]
-
-  model = new Load (10001,'MANIFEST-01', '2017-02-17: 17:35', '@41.554155,-93.633069,17', 
-    '@41.5871194,-93.628328,17', 'RuanTMS', 'tdillon', 'InQueue');
+  model = new Load (10001,'MANIFEST-01', '2017-02-17:17:35', '41.554155,-93.633069,17', 
+    '41.5871194,-93.628328,17', 'tdillon', this.loadStatus[1], 'RuanTMS');
 
   submitted = false;
 
