@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Load Dispatch Entry</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Load Id</label>
+        <input type="text" class="form-control" id="id" >1001</input>
+      </div>
+      <div class="form-group">
+        <label for="name">Manifest</label>
+        <input type="text" class="form-control" id="manifest" />
+      </div>
+      <div class="form-group">
+        <label for="departLocation">Depart Point</label>
+        <input type="text" class="form-control" id="departLocation"/>
+      </div>
+      <div class="form-group">
+        <label for="deliveryLocation">Delivery Point</label>
+        <input type="text" class="form-control" id="deliveryLocation"/>
+      </div>   
+      <div class="form-group">
+        <label for="carrier">Carrier</label>
+        <input type="text" class="form-control" id="deliveryLocation" >Ruan TMS</input>
+      </div>    
+      <div class="form-group">
+        <label for="driver">Driver Id</label>
+        <input type="text" class="form-control" id="driver" >tdillon</input>
+      </div>   
+      <div class="form-group">
+        <label for="fillStart">Fill Start</label>
+        <input type="text" class="form-control" id="fillStart"/>
+      </div>
+      <div class='form-group'>
+        <label for='loadStatus'>Load Status</label>
+        <select class="form-control" id='loadStatus' >
+          <option *ngFor="let stat of loadStatus" [value]="stat">{{stat}}</option>
+        </select>
+      </div>
+        <div class="form-group">
+          <label for='fileUpload'>Message File Upload</label>
+          <button (click)="onClickMe()">Send file</button>
+        </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+</div>
