@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'loaddispatchweb',
   template: '<load-form></load-form>'
   /*template: `<h1>{{title}} </h1> <br/>
   <h3>Hello</h3> <br/> 
