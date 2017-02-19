@@ -8,7 +8,7 @@ declare var AWS: any;
 
 @Component({
     moduleId: module.id,
-    selector: 'msg-upload',
+    selector: 'upload',
     template: `
         <h1>Msg Upload</h1>
         <input type="file" (change)="fileEvent($event)" />

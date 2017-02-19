@@ -11,24 +11,24 @@ import { Router }    from '@angular/router';
           Index
         </a>
       </span>
-      |
+   
       <span>
         <a routerLink="/home" routerLinkActive="active">
           Home
         </a>
       </span>
-      |
+  
       <span>
         <a routerLink="/upload" routerLinkActive="active">
           Upload
         </a>
       </span>
-      |
+ 
 
     </nav>
-    <main>
+
       <router-outlet></router-outlet>
-    </main>
+
     <footer>
       <span>LoadDispatch Starter by <a href="url">@iowatiger08</a></span>
       <div>

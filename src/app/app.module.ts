@@ -4,9 +4,9 @@ import { FormsModule}    	from '@angular/forms';
 import { RouterModule}		from '@angular/router';
 import { HttpModule } 		from '@angular/http';
 
-import { AppComponent }  	from './app.component';
-import { environment } 		from './environment';
-import { ROUTES } 			from './app.routes';
+import { AppComponent }  	  from './app.component';
+import { environment } 		  from './environment';
+import { routing } 			    from './app.routes';
 import { LoadFormComponent} from './home'; 
 import { MsgUploadComponent}from './upload';
 import { NoContentComponent}from './no-content'
@@ -16,7 +16,7 @@ import { NoContentComponent}from './no-content'
     BrowserModule, 
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES) 
+    RouterModule.forRoot(routing) 
   ],
   declarations: [ 
     AppComponent , 
