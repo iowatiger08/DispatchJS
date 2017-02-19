@@ -1,8 +1,44 @@
 import { Component } from '@angular/core';
+import { Router }    from '@angular/router';
 
 @Component({
   selector: 'loaddispatchweb',
-  template: '<load-form></load-form>'
+  template: `
+  <h1>{{title}}</h1>
+    <nav>
+      <span>
+        <a routerLink="/"  routerLinkActive="active">
+          Index
+        </a>
+      </span>
+      |
+      <span>
+        <a routerLink="/home" routerLinkActive="active">
+          Home
+        </a>
+      </span>
+      |
+      <span>
+        <a routerLink="/upload" routerLinkActive="active">
+          Upload
+        </a>
+      </span>
+      |
+
+    </nav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <footer>
+      <span>LoadDispatch Starter by <a href="url">@iowatiger08</a></span>
+      <div>
+        <a href="url">
+          <img src="ruanlogo" width="250">
+        </a>
+      </div>
+    </footer>
+  `
+  //template: '<load-form></load-form>'
   /*template: `<h1>{{title}} </h1> <br/>
   <h3>Hello</h3> <br/> 
   <h5> {{manifestLabel}} <input #manifest/> <br/>
@@ -23,6 +59,7 @@ export class AppComponent  {
   carrierLabel = 'Enter Carrier Name';
   uploadFileLabel ='Upload Message File Here';
   clickMessage = '';
+  //constructor( private router: Router){}
 
   onEnter(value: string){
     this.onClickMe(); 

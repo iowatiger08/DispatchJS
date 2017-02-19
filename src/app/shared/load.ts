@@ -1,7 +1,7 @@
 export class Load{
   
   constructor(
-    public id: number,
+    public loadid: number,
     public version: string,
     public manifest: string,
     public fillStart: string,
@@ -10,6 +10,8 @@ export class Load{
     public deliveryArrival: string,
     public driver: string,
     public loadStatus: string,
+    public deliveryLabel:string,
+    public departLabel:string,
     public carrier?: string,
   ){ }
 }

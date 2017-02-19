@@ -1,0 +1,4 @@
+<form  (ngSubmit)="onSubmit(f)" #f="ngForm" action="">
+<input type="file" (change)="fileEvent($event)" />
+</form>
+<button (click)="uploadfile(f)">Upload file!</button>
